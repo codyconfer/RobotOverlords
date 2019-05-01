@@ -33,11 +33,13 @@ https://docs.microsoft.com/en-us/dotnet/core/whats-new/dotnet-core-3-0
 
 1. Follow steps as descibed here: 
    https://discord.foxbot.me/docs/guides/getting_started/first-bot.html
-   > At the end of this, you should have an api key, a registered application with a registered bot, and your bot should be added to a server.
+   
+> At the end of this, you should have an api key, a registered application with a registered bot, and your bot should be added to a server.
 
 2. Populate .\RobotOverlords\appsettings.json botConfiguration.apiKey with the newly created discord key.
 3. Run ```dotnet restore``` on the solution
 4. Run the solution from visual studio and confirm that the bot logs in. 
+   
    > Posting the message !info in a channel the bot can see should cause the bot to response with information about itself.
 
 -----
@@ -48,12 +50,15 @@ https://docs.microsoft.com/en-us/dotnet/core/whats-new/dotnet-core-3-0
 
 ##### Adding a simple command in one class
 
-1. Create a new class in RobotOverlords.Modules, follow the *Module.cs naming convention
-2. Implement command logic.
-3. Register command with the following method attribute:
+1. Create a new class in RobotOverlords.Modules, follow the \*Module.cs naming convention
+2. Inherit from Discord.Commads.ModuleBase
+3. Implement command logic.
+4. Register command with the following method attribute:
    ```csharp
-
+using Discord.Commands;
+[Command(""), Summary("")]
    ```
+   where the command's trigger is !{{Command}}
 
 ##### Adding a data model for your module or service to use
 
@@ -65,6 +70,7 @@ https://docs.microsoft.com/en-us/dotnet/core/whats-new/dotnet-core-3-0
 1. Place service class into RobotOverlords.Modules.Services
 2. Register service class in RobotOverlords.Modules.Services.ModuleServiceCollectionBuilder(), this adds the service to an IServiceProvider that is dedicated to RobotOverlords.Modules at Startup.
 3. Access via constructor injection.
+   
    > See how RobotOverlords.Modules.Services.InfoService is injected into RobotOverlords.Modules.InfoModule
 
 -----
