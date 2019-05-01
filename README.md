@@ -40,7 +40,7 @@ https://docs.microsoft.com/en-us/dotnet/core/whats-new/dotnet-core-3-0
 3. Run ```dotnet restore``` on the solution
 4. Run the solution from visual studio and confirm that the bot logs in. 
    
-   > Posting the message !info in a channel the bot can see should cause the bot to response with information about itself.
+> Posting the message !info in a channel the bot can see should cause the bot to response with information about itself.
 
 -----
 
@@ -54,11 +54,11 @@ https://docs.microsoft.com/en-us/dotnet/core/whats-new/dotnet-core-3-0
 2. Inherit from Discord.Commads.ModuleBase
 3. Implement command logic.
 4. Register command with the following method attribute:
-   ```csharp
+```csharp
 using Discord.Commands;
 [Command(""), Summary("")]
-   ```
-   where the command's trigger is !{{Command}}
+```
+where the command's trigger is !{{Command}}
 
 ##### Adding a data model for your module or service to use
 
