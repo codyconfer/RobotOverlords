@@ -1,15 +1,13 @@
-﻿using Discord.Commands;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System;
 using System.Threading.Tasks;
+using Discord.Commands;
 using Discord.WebSocket;
 
 namespace RobotOverlords.Observers
 {
-    public class DiscordRoleObserver : DiscordClientObserverBase
+    public class DiscordVoiceChatObserver : DiscordClientObserverBase
     {
-        public DiscordRoleObserver(CommandService commandService,
+        public DiscordVoiceChatObserver(CommandService commandService,
             IServiceProvider moduleServiceProvider)
             : base(commandService, moduleServiceProvider) { }
 
@@ -17,9 +15,8 @@ namespace RobotOverlords.Observers
         {
             base.Subscribe(observable);
 
-            //Observable.RoleCreated += ;
-            //Observable.RoleUpdated += ;
-            //Observable.RoleDeleted += ;
+            //Observable.VoiceServerUpdated += ;
+            //Observable.UserVoiceStateUpdated += ;
 
             return Task.CompletedTask;
         }

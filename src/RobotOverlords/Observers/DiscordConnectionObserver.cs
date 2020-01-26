@@ -1,15 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 using Discord.Commands;
 using Discord.WebSocket;
 
 namespace RobotOverlords.Observers
 {
-    public class DiscordCurrentUserObserver : DiscordClientObserverBase
+    public class DiscordConnectionObserver : DiscordClientObserverBase
     {
-        public DiscordCurrentUserObserver(CommandService commandService,
+        public DiscordConnectionObserver(CommandService commandService,
             IServiceProvider moduleServiceProvider)
             : base(commandService, moduleServiceProvider) { }
 
@@ -17,10 +15,10 @@ namespace RobotOverlords.Observers
         {
             base.Subscribe(observable);
 
-            //Observable.JoinedGuild += ;
-            //Observable.LeftGuild += ;
-            //Observable.LoggedIn += ;
-            //Observable.LoggedOut += ;
+            //Observable.Connected += ;
+            //Observable.Disconnected += ;
+            //Observable.LatencyUpdated += ;
+            //Observable.Ready += ;
 
             return Task.CompletedTask;
         }

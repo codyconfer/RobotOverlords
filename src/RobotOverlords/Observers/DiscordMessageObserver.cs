@@ -1,10 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 using Discord.Commands;
 using Discord.WebSocket;
 using RobotOverlords.Extensions;
+using RobotOverlords.Modules.Constants;
 
 namespace RobotOverlords.Observers
 {
@@ -35,6 +34,10 @@ namespace RobotOverlords.Observers
             SocketUserMessage userMessage = message as SocketUserMessage;
             if (userMessage?.Author?.Username != Observable.CurrentUser.Username)
             {
+                var logMessage = userMessage?.Content?.Length > 255
+                    ? userMessage.Content.Substring(0, 255)
+                    : userMessage?.Content ?? string.Empty;
+                Console.WriteLine($"[Incoming Message]{Environment.NewLine}[From] {userMessage?.Author?.Username}{Environment.NewLine}[Message] {logMessage}{Environment.NewLine}{LogStrings.Divider}", ConsoleColor.Cyan);
                 int index = 0;
                 if (userMessage.HasCharPrefix('!', ref index) /* || msg.HasMentionPrefix(client.CurrentUser, ref pos) */)
                 {
