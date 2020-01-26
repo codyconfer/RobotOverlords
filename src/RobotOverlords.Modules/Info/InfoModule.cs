@@ -1,13 +1,10 @@
-﻿using System;
-using System.Text;
-using System.Threading;
+﻿using System.Threading;
 using System.Threading.Tasks;
 using Discord.Commands;
-using RobotOverlords.Modules.Services;
 
-namespace RobotOverlords.Modules
+namespace RobotOverlords.Modules.Info
 {
-    public class InfoModule : ModuleBase
+    public class InfoModule : RobotOverlordsModuleBase
     {
         private readonly InfoService _infoService;
 
@@ -19,11 +16,11 @@ namespace RobotOverlords.Modules
         [Command("info"), Summary("prints bot information in discord message.")]
         public async Task Info()
         {
-            var info = await _infoService.GetCurrentInfo(Context);
-            await Context.Channel.SendMessageAsync(info.ToString());
+            var info = await CreateContextModel(_infoService);
+            await SendMessageAsync(info.ToString());
             int sleep = 5000;
             await Task.Run(() => Thread.Sleep(sleep));
-            await Context.Channel.SendMessageAsync($"o'doyle rules!");
+            await SendMessageAsync($"o'doyle rules!");
         }
     }
 }

@@ -7,9 +7,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using RobotOverlords.Bots;
-using RobotOverlords.Modules.Services;
 using RobotOverlords.Builders;
 using RobotOverlords.Models;
+using RobotOverlords.Modules.Configuration;
 
 namespace RobotOverlords
 {
