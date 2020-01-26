@@ -26,7 +26,7 @@ namespace RobotOverlords.Bots
         public DiscordBot(DiscordSocketClient client,
             ServiceProvider moduleServiceProvider,
             IOptions<BotConfiguration> botOptions,
-            IApplicationLifetime applicationLifetime)
+            IHostApplicationLifetime applicationLifetime)
         {
             ApplicationLifetime = applicationLifetime ??
                 throw new ArgumentNullException(nameof(applicationLifetime));
@@ -40,7 +40,7 @@ namespace RobotOverlords.Bots
         public DiscordSocketClient Client { get; }
         private IServiceProvider ModuleServiceProvider { get; }
         private CommandService CommandService { get; set; }
-        private IApplicationLifetime ApplicationLifetime { get; }
+        private IHostApplicationLifetime ApplicationLifetime { get; }
         private IEnumerable<IClientObserver<DiscordSocketClient>> ClientObservers { get; set; }
         private BotConfiguration BotConfiguration { get; }
 
