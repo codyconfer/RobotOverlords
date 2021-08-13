@@ -6,16 +6,16 @@ RobotOverlords is a discord bot written in dotnet core 3 using discord .net.
 
 ### Software dependencies
 
-- Microsoft.NETCore.Platforms 3.0.0-preview3.19128.7
-- Discord .Net 2.0.1
-- Microsoft.Extensions.Configuration.CommandLine 2.2.0
-- Microsoft.Extensions.Configuration.Json 2.2.0
-- Microsoft.Extensions.Options.ConfigurationExtensions 2.2.0
-- Microsoft.Extensions.DependencyInjection 2.2.0
-- Microsoft.Extensions.Hosting 2.2.0
-- Microsoft.Extensions.Logging 2.2.0
-- Microsoft.WindowsDesktop.App 3.0.0-preview3-27504-2
-- System.ServiceProcess.ServiceController 4.5.0
+- Microsoft.NETCore.Platforms 
+- Discord .Net
+- Microsoft.Extensions.Configuration.CommandLine 
+- Microsoft.Extensions.Configuration.Json 
+- Microsoft.Extensions.Options.ConfigurationExtensions 
+- Microsoft.Extensions.DependencyInjection 
+- Microsoft.Extensions.Hosting 
+- Microsoft.Extensions.Logging 
+- Microsoft.WindowsDesktop.App 
+- System.ServiceProcess.ServiceController 
 
 -----
 
@@ -24,7 +24,6 @@ RobotOverlords is a discord bot written in dotnet core 3 using discord .net.
 > This solution has minimum functionality and is meant to be a template to quickly stand up custom bots with.
 
 https://docs.microsoft.com/en-us/dotnet/core/
-https://docs.microsoft.com/en-us/dotnet/core/whats-new/dotnet-core-3-0
 
 -----
 
@@ -82,7 +81,7 @@ where the command's trigger is !{{Command}}
 
 ### Build and Test
 
-> Like everyone else in existance: //TODO: Implement Unit Tests. 
+> Like everyone else in existence: //TODO: Implement Unit Tests. 
 
 ```dotnet build``` in the .sln directory
 
