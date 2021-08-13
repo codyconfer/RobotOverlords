@@ -2,12 +2,12 @@
 
 ## Introduction 
 
-RobotOverlords is a discord bot written in dotnet core 3 using discord.net.
+RobotOverlords is a discord bot written in dotnet core 3 using discord .net.
 
 ### Software dependencies
 
 - Microsoft.NETCore.Platforms 3.0.0-preview3.19128.7
-- Discord.Net 2.0.1
+- Discord .Net 2.0.1
 - Microsoft.Extensions.Configuration.CommandLine 2.2.0
 - Microsoft.Extensions.Configuration.Json 2.2.0
 - Microsoft.Extensions.Options.ConfigurationExtensions 2.2.0
@@ -23,7 +23,6 @@ RobotOverlords is a discord bot written in dotnet core 3 using discord.net.
 
 > This solution has minimum functionality and is meant to be a template to quickly stand up custom bots with.
 
-https://discord.foxbot.me/docs/guides/introduction/intro.html
 https://docs.microsoft.com/en-us/dotnet/core/
 https://docs.microsoft.com/en-us/dotnet/core/whats-new/dotnet-core-3-0
 
@@ -31,8 +30,7 @@ https://docs.microsoft.com/en-us/dotnet/core/whats-new/dotnet-core-3-0
 
 ### Installation process
 
-1. Follow steps as descibed here: 
-   https://discord.foxbot.me/docs/guides/getting_started/first-bot.html
+1. Create a discord developer account and obtain an api key here: https://discord.com/developers/applications
    
 > At the end of this, you should have an api key, a registered application with a registered bot, and your bot should be added to a server.
 
