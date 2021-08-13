@@ -29,7 +29,7 @@ https://docs.microsoft.com/en-us/dotnet/core/
 
 ### Installation process
 
-1. Create a discord developer account and obtain an api key here: https://discord.com/developers/applications
+1. Create a discord developer account, a bot, and obtain a bot token here: https://discord.com/developers/applications
    
 > At the end of this, you should have an api key, a registered application with a registered bot, and your bot should be added to a server.
 
