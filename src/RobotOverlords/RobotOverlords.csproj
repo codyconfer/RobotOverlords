@@ -4,7 +4,7 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Discord.Net" Version="2.1.1" />
+    <PackageReference Include="Discord.Net" Version="2.4.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration.CommandLine" Version="3.1.18" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="3.1.18" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="3.1.18" />
